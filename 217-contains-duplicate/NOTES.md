@@ -1,1 +1,3 @@
-​
+* in the first approach the run time would be greater...
+* when we sort the array complexity is nlogn.
+*
