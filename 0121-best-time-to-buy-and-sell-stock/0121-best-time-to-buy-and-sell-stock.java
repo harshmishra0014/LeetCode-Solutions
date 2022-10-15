@@ -6,7 +6,7 @@ class Solution {
         {
             if(a<min)
                 min=a;
-            if(a-min > profit)
+            else if(a-min > profit)
                 profit=a-min;
         }
         return profit;
