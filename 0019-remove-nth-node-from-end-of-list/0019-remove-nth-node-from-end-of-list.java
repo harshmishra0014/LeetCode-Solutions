@@ -9,7 +9,7 @@
  * }
  */
 
-class Solution {
+class Solution1 {
     // TC O(n)+O(n)
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode start=new ListNode();
@@ -33,5 +33,26 @@ class Solution {
             start.next=start.next.next;
         }
         return head;
+    }
+}
+
+//using slow and fast pointer 
+//TC O(n)
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode start=new ListNode();
+        start.next=head;
+        ListNode slow=start;
+        ListNode fast=start;
+        
+        for(int i=1;i<=n;i++){
+            fast=fast.next;
+        }
+        while(fast.next!=null){
+            fast=fast.next;
+            slow=slow.next;
+        }
+        slow.next=slow.next.next;
+        return start.next;
     }
 }
