@@ -24,8 +24,4 @@ class Solution:
                 if indegree[a]==0:
                     q.append(a)
         
-        if c==n:
-            return True
-        else:
-            return False
-        
+        return c==n
